@@ -1,0 +1,52 @@
+
+% TIC TAC TOE GAME
+
+% Winning combinations
+
+win(Board, P) :-
+    nth1(A, Board, P),
+    nth1(B, Board, P),
+    nth1(C, Board, P),
+    A < B,
+    B < C,
+    line(A, B, C).
+
+% Possible winning lines
+
+line(1, 2, 3).
+line(4, 5, 6).
+line(7, 8, 9).
+line(1, 4, 7).
+line(2, 5, 8).
+line(3, 6, 9).
+line(1, 5, 9).
+line(3, 5, 7).
+
+% Check winner
+
+winner(Board, P) :-
+    win(Board, P).
+
+% Check draw
+
+draw(Board) :-
+    \+ member(empty, Board),
+    \+ winner(Board, x),
+    \+ winner(Board, o).
+
+% Display winner
+
+result(Board) :-
+    winner(Board, x),
+    write('Player X wins!').
+
+result(Board) :-
+    winner(Board, o),
+    write('Player O wins!').
+
+result(Board) :-
+    draw(Board),
+    write('Game is a draw!').
+
+result(_) :-
+    write('Game is not finished.').
