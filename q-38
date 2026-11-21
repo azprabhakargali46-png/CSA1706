@@ -1,0 +1,30 @@
+
+% SIMPLE CHATBOT USING PROLOG
+
+% Greetings
+
+response(hello, 'Hello! How are you?').
+response(hi, 'Hi! Nice to meet you.').
+response(good_morning, 'Good morning! Have a nice day.').
+
+% General questions
+
+response(how_are_you, 'I am fine. Thank you!').
+response(your_name, 'I am a Prolog chatbot.').
+response(what_is_ai, 'AI stands for Artificial Intelligence.').
+
+% Farewell
+
+response(bye, 'Goodbye! Have a nice day.').
+
+% Chatbot rule
+
+chat(Input) :-
+    response(Input, Reply),
+    write('Chatbot: '),
+    write(Reply),
+    nl.
+
+chat(_) :-
+    write('Chatbot: Sorry, I do not understand.'),
+    nl.
