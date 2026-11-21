@@ -1,0 +1,8 @@
+% Facts database storing person(Name, DateOfBirth(Day, Month, Year))
+person('Alice', dob(15, May, 1998)).
+person('Bob', dob(22, August, 2000)).
+person('Charlie', dob(10, January, 1995)).
+
+% Query predicate to retrieve DOB by Name
+get_dob(Name, Day, Month, Year) :-
+    person(Name, dob(Day, Month, Year)).sss
