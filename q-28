@@ -1,0 +1,18 @@
+
+% Student-Teacher-Subject Database
+
+student(101, 'Kanishka').
+student(102, 'Lakshaya').
+student(103, 'Thejaswini').
+
+teacher(1, 'Dr. Kumar').
+teacher(2, 'Dr. Ravi').
+
+subject(101, 'Artificial Intelligence').
+subject(102, 'Prolog Programming').
+
+% Student-Teacher-Subject Relationship
+
+student_teacher_sub(101, 1, 101).
+student_teacher_sub(102, 2, 102).
+student_teacher_sub(103, 1, 102).
