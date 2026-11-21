@@ -1,0 +1,41 @@
+
+% MEDICAL DIAGNOSIS SYSTEM
+
+% Symptoms of diseases
+
+has_symptom(fever, flu).
+has_symptom(cough, flu).
+has_symptom(headache, flu).
+
+has_symptom(fever, malaria).
+has_symptom(chills, malaria).
+has_symptom(sweating, malaria).
+
+has_symptom(cough, cold).
+has_symptom(sneezing, cold).
+has_symptom(runny_nose, cold).
+
+% Diagnosis rules
+
+diagnosis(flu) :-
+    has_symptom(fever, flu),
+    has_symptom(cough, flu),
+    has_symptom(headache, flu).
+
+diagnosis(malaria) :-
+    has_symptom(fever, malaria),
+    has_symptom(chills, malaria),
+    has_symptom(sweating, malaria).
+
+diagnosis(cold) :-
+    has_symptom(cough, cold),
+    has_symptom(sneezing, cold),
+    has_symptom(runny_nose, cold).
+
+% Display diagnosis
+
+diagnose(Disease) :-
+    diagnosis(Disease),
+    write('Possible disease: '),
+    write(Disease),
+    nl.
