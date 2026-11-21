@@ -1,0 +1,25 @@
+
+% SIMPLE EXPERT SYSTEM
+
+% Facts and rules
+
+problem(no_power) :-
+    symptom(computer_not_starting),
+    symptom(power_light_off).
+
+problem(battery_issue) :-
+    symptom(laptop_not_charging).
+
+problem(internet_issue) :-
+    symptom(wifi_not_working).
+
+problem(overheating) :-
+    symptom(computer_getting_hot).
+
+% Expert system diagnosis
+
+diagnose(Problem) :-
+    problem(Problem),
+    write('Possible problem: '),
+    write(Problem),
+    nl.
