@@ -1,0 +1,14 @@
+
+% PLANETS DATABASE
+
+planet(mercury, 4879, 88).
+planet(venus, 12104, 225).
+planet(earth, 12742, 365).
+planet(mars, 6779, 687).
+planet(jupiter, 139820, 4333).
+planet(saturn, 116460, 10759).
+planet(uranus, 50724, 30687).
+planet(neptune, 49244, 60190).
+
+% Planet details:
+% planet(Name, Diameter_in_km, Orbital_period_in_days)
