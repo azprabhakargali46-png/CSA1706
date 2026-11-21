@@ -1,0 +1,22 @@
+
+% DIET SYSTEM BASED ON DISEASE
+
+% Disease facts
+
+disease(diabetes).
+disease(fever).
+disease(obesity).
+disease(anemia).
+
+% Diet recommendations
+
+diet(diabetes, 'Low sugar food').
+diet(fever, 'Fruits and plenty of fluids').
+diet(obesity, 'Low calorie food').
+diet(anemia, 'Iron rich food').
+
+% Rule to find diet based on disease
+
+recommend_diet(Disease, Diet) :-
+    disease(Disease),
+    diet(Disease, Diet).
